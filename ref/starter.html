@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAP stack</title>
+  <meta name="description" content="Basic starter HTML page for the CHAP stack">
+  <meta name="author" content="Denise Case">
+  <meta name="author" content="Diana Linville">
+
+  <!-- Get current Bootstrap CSS from https://www.bootstrapcdn.com/ -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+  <!-- Import Brython & Brython stdlib from https://cdnjs.com/libraries/brython -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js"
+    integrity="sha512-6xoV9qvQHPMnIFWzWrRwuq25qpgJ8FiGKekJ+7Bstb8/4XRC98k2c49IpdUVc5QitMNHKWPcFjFUkDxdIjJ7Nw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js"
+    integrity="sha512-QbMgbJbXnZv0V/+jpdd68nkyOrYwP/UsJAH/TGQmVHgwwrxI7QNKzRn3dKuG3kG/lVWHx5hYXBISk7zX86TInw=="
+    crossorigin="anonymous"></script>
+
+  <!-- Optional: Add a link to custom styles (comment out if not used) -->
+
+  <link rel="stylesheet" href="styles/custom-styles.css">
+
+</head>
+
+<!-- initialize brython and bootstrap in the page body -->
+
+<body onload="brython()" class="container-fluid text-center">
+
+  <!-- Add page elements here -->
+
+
+
+
+
+  <!-- Add scripts here (just before closing body tag) -->
+  <script type="text/python" src="scripts/01-hello.py"></script>
+
+</body>
+
+</html>
+
+<!-- Use this template to create index.html (the default page for a site):
+  1. See Brython https://brython.info/static_tutorial/en/index.html
+  2. Google Bootstrap CDN - add CSS / HTML link to head
+  3. Google Brython CDN - add script tag for brython.min.js to head
+  4.                    - add script tag for brython_stdlib.min.js to head
+  5. Optional: uncomment custom-styles tag if the file exists
+  -->

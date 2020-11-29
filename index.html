@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAP stack</title>
+  <meta name="description" content="Basic starter HTML page for the CHAP stack">
+  <meta name="author" content="Denise Case">
+  <meta name="author" content="Diana Linville">
+
+  <!-- Get current Bootstrap CSS  from https://www.bootstrapcdn.com/ -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+
+  <!-- Import Brython & Brython stdlib from https://cdnjs.com/libraries/brython -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython.min.js"
+    integrity="sha512-6xoV9qvQHPMnIFWzWrRwuq25qpgJ8FiGKekJ+7Bstb8/4XRC98k2c49IpdUVc5QitMNHKWPcFjFUkDxdIjJ7Nw=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.0/brython_stdlib.min.js"
+    integrity="sha512-QbMgbJbXnZv0V/+jpdd68nkyOrYwP/UsJAH/TGQmVHgwwrxI7QNKzRn3dKuG3kG/lVWHx5hYXBISk7zX86TInw=="
+    crossorigin="anonymous"></script>
+
+  <!-- Optional: Add a link to custom styles (comment out if not used) -->
+
+  <link rel="stylesheet" href="styles/custom-styles.css">
+
+</head>
+
+<!-- initialize brython and bootstrap in the page body -->
+
+<body onload="brython()" class="container-fluid text-center">
+
+  <!-- Add page elements here -->
+
+  <br>
+  <h1> Python Programming Practice</h1>
+  <h3>CCSC-CP 2021 Workshop Proposal</h3>
+
+  <!-- Get some reusable inputs in a nice form -->
+  <form class="text-center border border-light p-5 shadow p-3 mb-5 bg-white rounded" action="#!">
+
+    <p class="h4 mb-4">User Inputs</p>
+
+    <!-- input name 1 -->
+    <input type="text" id="input-name1" value="Abbie" title="Enter your name" class="form-control mb-4">
+
+    <!-- input name 2 -->
+    <input type="text" id="input-name2" value="Lexie" title="Enter friend's name" class="form-control mb-4">
+
+    <!-- input number 1 -->
+    <input type="number" id="input-num1" value="3" min="1" max="100" class="form-control mb-4">
+
+    <!-- input number 2 -->
+    <input type="number" id="input-num2" value="5" min="1" max="100" class="form-control mb-4">
+
+    <!-- Add buttons for colors see https://getbootstrap.com/docs/4.0/components/buttons -->
+    <button type="submit" id="input-btn1" class="btn btn-primary my-4">Btn 1</button>
+    <button type="submit" id="input-btn2" class="btn btn-danger my-4">Btn 2</button>
+    <button type="submit" id="input-btn3" class="btn btn-info my-4">Btn 3</button>
+    <button type="submit" id="input-btn4" class="btn btn-success my-4">Btn 4</button>
+    <button type="submit" id="input-btn5" class="btn btn-warning my-4">Btn 5</button>
+    <button type="submit" id="input-btn6" class="btn btn-primary my-4">Btn 6</button>
+    <button type="submit" id="input-btn7" class="btn btn-danger my-4">Btn 7</button>
+    <button type="submit" id="input-btn8" class="btn btn-info my-4">Btn 8</button>
+    <button type="submit" id="input-btn9" class="btn btn-success my-4">Btn 9</button>
+    <button type="submit" id="input-btn10" class="btn btn-warning my-4">Btn 10</button>
+  </form>
+
+  <!-- Ex 1 -->
+  <div>
+    <h2>Exercise 1</h2>
+    <div id="output1"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 2 -->
+  <div>
+    <h2>Exercise 2</h2>
+    <div id="output2"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 3 -->
+  <div>
+    <h2>Exercise 3</h2>
+    <div id="output3"></div>
+    <div id="output3-names"></div>
+    <div id="output3-ranch"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 4 -->
+  <div>
+    <h2>Exercise 4</h2>
+    <div id="output4"></div>
+    <div id="output4-names"></div>
+    <div id="output4-ranch">
+      <p id=output4-ranch-message></p>
+      <article id="output4-ranch-article">
+      </article>
+    </div>
+    <hr>
+  </div>
+
+  <!-- Ex 5 -->
+  <div>
+    <h2>Exercise 5</h2>
+    <div id="output5">
+      <div id="output5-message"></div>
+       Paste <a href="ref/recipe.txt"> recipe ingredients</a> below to convert to sorted grocery list:
+      <textarea id="input-recipe-5" rows="3" cols="50" class="form-control z-depth-1">
+    </textarea>
+      <ul id="output-list-5" class="list-group">
+      </ul>
+    </div>
+    <hr>
+  </div>
+
+  <!-- Ex 6 -->
+  <div>
+    <h2>Exercise 6</h2>
+    <div id="output6"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 7 -->
+  <div>
+    <h2>Exercise 7</h2>
+    <div id="output7-message"></div>
+    <div id="output7" class="grid">
+      <div id="box0"></div>
+      <div id="box1"></div>
+      <div id="box2"></div>
+      <div id="box3"></div>
+      <div id="box4"></div>
+      <div id="box5"></div>
+      <div id="box6"></div>
+      <div id="box7"></div>
+      <div id="box8"></div>
+    </div>
+    <hr>
+  </div>
+
+  <!-- Ex 8 -->
+  <div>
+    <h2>Exercise 8</h2>
+    <div id="output8"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 9 -->
+  <div>
+    <h2>Exercise 9</h2>
+    <div id="output9"></div>
+    <hr>
+  </div>
+
+  <!-- Ex 10 -->
+  <div>
+    <h2>Exercise 10</h2>
+    <div id="output10"></div>
+    <hr>
+  </div>
+
+  <!-- Add scripts here (just before closing body tag) -->
+  <script type="text/python" src="scripts/01-hello.py"></script>
+  <script type="text/python" src="scripts/02-io.py"></script>
+  <script type="text/python" src="scripts/03-control.py"></script>
+  <script type="text/python" src="scripts/04-functions.py"></script>
+  <script type="text/python" src="scripts/05-sequences.py"></script>
+  <script type="text/python" src="scripts/06-unordered.py"></script>
+  <script type="text/python" src="scripts/07-arrays.py"></script>
+  <script type="text/python" src="scripts/08-strings.py"></script>
+  <script type="text/python" src="scripts/09-files.py"></script>
+  <script type="text/python" src="scripts/10-person.py"></script>
+
+</body>
+
+</html>
